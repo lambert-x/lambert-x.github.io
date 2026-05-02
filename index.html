@@ -23,6 +23,94 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="icon" type="image/png" href="images/JHU_icon.jpg">
+  <style>
+    html,
+    body {
+      background: #000;
+      color: #9f9f9f;
+    }
+
+    body,
+    td,
+    th,
+    tr,
+    p {
+      color: #9f9f9f;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a,
+    heading,
+    papertitle,
+    name {
+      color: #f2f2f2;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: #e8e8e8;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    a:focus,
+    a:hover {
+      color: #bdbdbd;
+      border-color: #bdbdbd;
+      text-decoration: none;
+    }
+
+    b,
+    strong,
+    papertitle {
+      color: #ffffff;
+    }
+
+    em {
+      color: #cfcfcf;
+    }
+
+    hr {
+      border-top: 1px solid #2a2a2a;
+    }
+
+    pre {
+      background: #0f0f0f;
+      color: #e8e8e8;
+      border: 1px solid #2a2a2a;
+    }
+
+    img,
+    video {
+      border-radius: 12px;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    span[style*="color: red"] {
+      color: #fff !important;
+    }
+
+    .xai-name-row {
+      align-items: center;
+      display: inline-flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .xai-logo {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+    }
+
+    .profile-photo {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .is-hidden {
+      display: none;
+    }
+  </style>
 </head>
 
 
@@ -33,18 +121,22 @@
           <tr style="padding:0px">
             <td style="padding:2.5%;width:70%;vertical-align:middle">
               <p style="text-align:center">
-                <name>Junfei Xiao</name>
+                <span class="xai-name-row">
+                  <svg class="xai-logo" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="xAI logo" role="img">
+                    <path d="M2.30047 8.77631L12.0474 23H16.3799L6.63183 8.77631H2.30047ZM6.6285 16.6762L2.29492 23H6.63072L8.79584 19.8387L6.6285 16.6762ZM17.3709 1L9.88007 11.9308L12.0474 15.0944L21.7067 1H17.3709ZM18.1555 7.76374V23H21.7067V2.5818L18.1555 7.76374Z" fill="#fff" />
+                  </svg>
+                  <name>Junfei Xiao</name>
+                </span>
               </p>
-              <p>I am a Computer Science Ph.D. student in <a href="https://ccvl.jhu.edu/">CCVL research group</a> at <a href="https://www.jhu.edu/">Johns Hopkins University</a>, advised by <a href="https://en.wikipedia.org/wiki/Bloomberg_Distinguished_Professorships">Bloomberg Distinguished Professor</a> <a href="http://www.cs.jhu.edu/~ayuille/"><b>Dr. Alan Yuille</b></a>.
+              <p>I am a <b>Member of Technical Staff</b> at <a href="https://x.ai/">xAI</a>, where I work on <b>Grok Imagine Video Generation</b>.
               </p>
 
 
-              <p>I received my M.S.E. degree in Computer Science from <a href="https://www.jhu.edu/">Johns Hopkins University</a>. Before this, I got B.E. in Mechanical Engineering and Double Degree in Mathematics from <a href="https://en.wikipedia.org/wiki/Beihang_University">Beihang University</a>. 
+              <p>I lead efforts in <b>video pretraining & post-training data mixture, captioning, and training recipes</b>. I build <b>scalable highest quality in-house video generation dataset pipelines</b> for the Grok Imagine Video base model and downstream tasks (editing, reference-guided, super-resolution, etc.).
               </p>
 
-              <p>I build multi-modal generative systems for movie generation and scalable world modeling. </p>
+              <p>I received my Ph.D. and M.S.E. degrees in Computer Science from <a href="https://www.jhu.edu/">Johns Hopkins University</a>, where I was advised by <a href="https://en.wikipedia.org/wiki/Bloomberg_Distinguished_Professorships">Bloomberg Distinguished Professor</a> <a href="http://www.cs.jhu.edu/~ayuille/"><b>Dr. Alan Yuille</b></a>. Before this, I got B.E. in Mechanical Engineering and Double Degree in Mathematics from <a href="https://en.wikipedia.org/wiki/Beihang_University">Beihang University</a>.</p>
               
-              <p><b>I do product-driven research.</b></p>
 
 
 
@@ -63,7 +155,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/JunfeiXiao.jpg"><img style="width:100%;max-width:100%;border-radius:50%" alt="profile photo" src="images/JunfeiXiao.jpg" class="hoverZoomLink"></a>
+              <a href="images/JunfeiXiao.jpg"><img style="width:100%;max-width:100%;border-radius:50%" alt="profile photo" src="images/JunfeiXiao.jpg" class="hoverZoomLink profile-photo"></a>
             </td>
           </tr>
         </tbody></table>
@@ -83,8 +175,10 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
             <ul>
-              <li><b><span style="color: red;">[July 2025]</span></b> My new work <a href="https://thecinema.ai/"><b>Captain Cinema</b></a> on short movie generation is out! We build a state-of-the-art movie generation system through interleaved unified video generation.
-              <li><b><span style="color: red;">[July 2025]</span></b> The project <a href="https://arxiv.org/abs/2507.07104"><b>VLV</b></a> is released! It is a scalable knowledge distillation framework that builds state-of-the-art vision-language captioner with negligible cost.
+              <li><b><span style="color: red;">[May 2026]</span></b> <a href="https://johnson111788.github.io/open-safari/"><b>Captain Safari</b></a> is accepted to <b>CVPR 2026</b>!
+              <li><b><span style="color: red;">[July 2025]</span></b> <a href="https://thecinema.ai/"><b>Captain Cinema</b></a> is accepted to <b>ICLR 2025</b>!
+              <li><b><span style="color: red;">[July 2025]</span></b> <a href="https://arxiv.org/abs/2507.07104"><b>VLV</b></a> is accepted to <b>NeurIPS 2025</b>!
+              <li><b><span style="color: red;">[July 2025]</span></b> <a href="https://primecai.github.io/moc/"><b>Mixture of Contexts for Long Video Generation</b></a> is accepted to <b>ICLR 2025</b>!
               <li><b><span style="color: red;">[June 2025]</span></b> The project <a href="https://yunfeixie233.github.io/ViGaL/"><b>ViGaL</b></a> is released! It demonstrates that MLLMs can develop transferable reasoning skills by playing simple arcade games like Snake and achieve strong math problem solving performance.
               <li><b>[May 2025]</b> <b>VideoAuteur</b> is accepted to <b>ICCV 2025</b>! Check out the cool demos on the <a href="https://videoauteur.github.io">project page</a> and <a href="https://arxiv.org/abs/2501.06173">paper</a>!
               <li><b>[Dec 2024]</b> My latest work <a href="https://arxiv.org/abs/2412.09624"><b>GenEx: Generating an Explorable World</b></a> is out! Check out the cool demos on the <a href="http://GenEx.world">project page</a> and <a href="https://arxiv.org/abs/2412.09624">paper</a>!
@@ -113,6 +207,50 @@
                 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:45%;vertical-align:top">
+                <video id="captain-safari-video" width="350" autoplay muted loop playsinline>
+                    <source src="https://johnson111788.github.io/open-safari/asset/CaptainSafari_Trailer.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </td>
+            <td width="75%" valign="middle">
+                <p>
+                    <a href="https://johnson111788.github.io/open-safari/">
+                        <papertitle>Captain Safari: A World Engine</papertitle>
+                    </a>
+                    <br>
+                    <a href="https://sites.google.com/view/yu-cheng-chou">Yu-Cheng Chou</a>,
+                    <a href="#">Xingrui Wang</a>,
+                    <a href="https://openreview.net/profile?id=%7EYitong_Li5">Yitong Li</a>,
+                    <a href="https://jiahaoplus.github.io/">Jiahao Wang</a>,
+                    <a href="#">Hanting Liu</a>,
+                    <a href="https://cihangxie.github.io/">Cihang Xie</a>,
+                    <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>,
+                    <strong>Junfei Xiao*</strong>
+                    <br>
+                    (<strong>*: Project Lead</strong>)
+                    <br>
+                    <em>CVPR</em>, 2026
+                    <br>
+                </p>
+                <div class="paper" id="chou2026captainsafari">
+                    <a href="https://arxiv.org/abs/2511.22815">arXiv</a> /
+                    <a href="https://johnson111788.github.io/open-safari/">project page</a> /
+                    <a href="https://github.com/johnson111788/Captain-Safari/">code</a> /
+                    <a shape="rect" href="javascript:togglebib('chou2026captainsafari')" class="togglebib">bibtex</a>
+                    <pre xml:space="preserve">
+@inproceedings{chou2026captainsafari,
+  title={Captain Safari: A World Engine},
+  author={Chou, Yu-Cheng and Wang, Xingrui and Li, Yitong and Wang, Jiahao and Liu, Hanting and Xie, Cihang and Yuille, Alan and Xiao, Junfei},
+  booktitle={CVPR},
+  year={2026}
+}</pre>
+                </div>
+                <br>
+            </td>
+        </tr>
+
+          <tr>
+            <td style="padding:20px;width:45%;vertical-align:top">
                 <video id="captain-cinema-video" width="350" autoplay muted loop playsinline>
                     <source src="images/long_demo_shot1-24.mp4" type="video/mp4">
                     Your browser does not support the video tag.
@@ -138,7 +276,7 @@
                     <br>
                     (<strong>*: Project Lead</strong>)
                     <br>
-                    <em>arXiv preprint</em>, 2025
+                    <em>ICLR</em>, 2025
                     <br>
                 </p>
                 <div class="paper" id="xiao2025captain">
@@ -146,16 +284,62 @@
                     <a href="https://thecinema.ai/">project page</a> /
                     <a shape="rect" href="javascript:togglebib('xiao2025captain')" class="togglebib">bibtex</a>
                     <pre xml:space="preserve">
-@article{xiao2025captain,
+@inproceedings{xiao2025captain,
   title={Captain Cinema: Towards Short Movie Generation},
   author={Xiao, Junfei and Yang, Ceyuan and Zhang, Lvmin and Cai, Shengqu and Zhao, Yang and Guo, Yuwei and Wetzstein, Gordon and Agrawala, Maneesh and Yuille, Alan and Jiang, Lu},
-  journal={arXiv preprint arXiv:2507.18634},
+  booktitle={ICLR},
   year={2025}
 }</pre>
                 </div>
                 <br>
             </td>
         </tr>
+
+         <tr>
+            <td style="padding:20px;width:45%;vertical-align:top">
+                <video id="moc-video" width="350" autoplay muted loop playsinline>
+                    <source src="https://primecai.github.io/moc/videos/overview_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </td>
+            <td width="75%" valign="middle">
+                <p>
+                    <a href="https://primecai.github.io/moc/">
+                        <papertitle>Mixture of Contexts for Long Video Generation</papertitle>
+                    </a>
+                    <br>
+                    <a href="https://primecai.github.io">Shengqu Cai</a>,
+                    <a href="https://ceyuan.me">Ceyuan Yang</a>,
+                    <a href="https://scholar.google.com/citations?user=ANMsdHYAAAAJ&hl=en">Lvmin Zhang</a>,
+                    <a href="https://guoyww.github.io">Yuwei Guo</a>,
+                    <strong>Junfei Xiao</strong>,
+                    <a href="#">Ziyan Yang</a>,
+                    <a href="#">Yinghao Xu</a>,
+                    <a href="#">Zhenheng Yang</a>,
+                    <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>,
+                    <br>
+                    <a href="#">Leonidas Guibas</a>,
+                    <a href="https://graphics.stanford.edu/~maneesh/">Maneesh Agrawala</a>,
+                    <a href="https://www.lujiang.info/">Lu Jiang</a>,
+                    <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>
+                    <br>
+                    <em>ICLR</em>, 2025
+                    <br>
+                </p>
+                <div class="paper" id="cai2025moc">
+                    <a href="https://primecai.github.io/moc/">project page</a> /
+                    <a shape="rect" href="javascript:togglebib('cai2025moc')" class="togglebib">bibtex</a>
+                    <pre xml:space="preserve">
+@inproceedings{cai2025moc,
+  title={Mixture of Contexts for Long Video Generation},
+  author={Cai, Shengqu and Yang, Ceyuan and Zhang, Lvmin and Guo, Yuwei and Xiao, Junfei and Yang, Ziyan and Xu, Yinghao and Yang, Zhenheng and Yuille, Alan and Guibas, Leonidas and Agrawala, Maneesh and Jiang, Lu and Wetzstein, Gordon},
+  booktitle={ICLR},
+  year={2025}
+}</pre>
+                </div>
+                <br>
+            </td>
+         </tr>
 
          <tr>
             <td style="padding:20px;width:45%;vertical-align:center">
@@ -178,7 +362,7 @@
                     <br>
                     (<strong>*: Project Lead</strong>)
                     <br>
-                    <em>arXiv preprint</em>, 2025
+                    <em>NeurIPS</em>, 2025
                 </p>
                 <div class="paper" id="zhang2025vlv">
                     <a href="https://arxiv.org/abs/2507.07104">arXiv</a> /
@@ -187,10 +371,10 @@
                     <a href="https://huggingface.co/datasets/ccvl/LAION-High-Qualtiy-Pro-6M-VLV">dataset</a> /
                     <a shape="rect" href="javascript:togglebib('zhang2025vlv')" class="togglebib">bibtex</a>
                     <pre xml:space="preserve">
-@article{zhang2025vlv,
+@inproceedings{zhang2025vlv,
   title={VLV: Vision-Language-Vision Auto-Encoder: Scalable Knowledge Distillation from Diffusion Models},
   author={Zhang, Tiezheng and Li, Yitong and Chou, Yu-cheng and Chen, Jieneng and Yuille, Alan L and Wei, Chen and Xiao, Junfei},
-  journal={arXiv preprint arXiv:2507.07104},
+  booktitle={NeurIPS},
   year={2025}
 }</pre>
                 </div>
@@ -463,7 +647,7 @@
             </td>
         </tr> <!--liu2023clipdriven-->
         
-          <tr>
+          <tr class="is-hidden">
             <td style="padding:20px;width:45%;vertical-align:top">
                 <img src='images/hu2023labelfree.png' width="350"></div>
                     </div>
@@ -503,7 +687,7 @@
           </tr> <!--hu2023labelfree-->
 
           
-          <tr>
+          <tr class="is-hidden">
             <td style="padding:20px;width:45%;vertical-align:top">
                 <img src='images/bai2022masked.png' width="350"></div>
                     </div>
@@ -544,7 +728,7 @@
             </td>
         </tr> <!--bai2022masked-->
 
-          <tr>
+          <tr class="is-hidden">
             <td style="padding:20px;width:45%;vertical-align:top">
                 <img src='images/xiao2023delving.png' width="350"></div>
                     </div>
@@ -580,7 +764,7 @@
             </td>
         </tr> <!--xiao2023delving-->
 
-        <tr>
+        <tr class="is-hidden">
             <td style="padding:20px;width:45%;vertical-align:top">
                 <img src='images/xiao2021learning.png' width="350"></div>
                     </div>
@@ -622,7 +806,7 @@
         </tr> <!--xiao2021learning-->
 
         
-        <tr>
+        <tr class="is-hidden">
           <td style="padding:20px;width:45%;vertical-align:top">
               <img src='images/xiao2022catenorm.png' width="350"></div>
                   </div>
@@ -665,7 +849,7 @@
           </td>
       </tr> <!--xiao2022catenorm-->
 
-      <tr>
+      <tr class="is-hidden">
         <td style="padding:20px;width:45%;vertical-align:top">
             <img src='images/wang2019bio.jpg' width="350"></div>
                 </div>
@@ -711,14 +895,14 @@
         <hr>
         
         
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="is-hidden" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
                 <td style="padding:10px;width:100%;vertical-align:middle">
                     <heading>Honors and Awards</heading>
                 </td>
             </tr>
         </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table class="is-hidden" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         
           <tr>
             <td style="padding:20px;width:45%;vertical-align:middle">
@@ -739,7 +923,7 @@
         
 
         </tbody></table>
-        <hr>
+        <hr class="is-hidden">
         
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
