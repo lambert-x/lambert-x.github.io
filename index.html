@@ -208,9 +208,21 @@
           <tr>
             <td style="padding:20px;width:45%;vertical-align:top">
                 <video id="captain-safari-video" width="350" autoplay muted loop playsinline>
-                    <source src="https://johnson111788.github.io/open-safari/asset/CaptainSafari_Trailer.mp4" type="video/mp4">
+                    <source src="https://johnson111788.github.io/open-safari/asset/CaptainSafari_Trailer.mp4#t=2" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <script>
+                    (function() {
+                        var v = document.getElementById('captain-safari-video');
+                        var START = 2;
+                        v.addEventListener('loadedmetadata', function() {
+                            if (v.currentTime < START) v.currentTime = START;
+                        });
+                        v.addEventListener('timeupdate', function() {
+                            if (v.currentTime < START) v.currentTime = START;
+                        });
+                    })();
+                </script>
             </td>
             <td width="75%" valign="middle">
                 <p>
