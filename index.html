@@ -957,29 +957,26 @@ hideallbibs();
 
 // Set video playback rate
 document.addEventListener('DOMContentLoaded', function() {
-    // Set playback rate for GenEx video
-    const genexVideo = document.getElementById('genex-video');
-    if (genexVideo) {
-        genexVideo.addEventListener('loadeddata', function() {
-            genexVideo.playbackRate = 2.0;
-        });
-    }
-    
-    // Set playback rate for VideoAuteur video
-    const videoauteurVideo = document.getElementById('videoauteur-video');
-    if (videoauteurVideo) {
-        videoauteurVideo.addEventListener('loadeddata', function() {
-            videoauteurVideo.playbackRate = 2.0;
-        });
-    }
-    
-    // Set playback rate for Captain Cinema video
-    const captainVideo = document.getElementById('captain-cinema-video');
-    if (captainVideo) {
-        captainVideo.addEventListener('loadeddata', function() {
-            captainVideo.playbackRate = 3.0;
-        });
-    }
+    const playbackRates = {
+        'captain-safari-video': 2.0,
+        'captain-cinema-video': 4.5,
+        'videoauteur-video': 2.0,
+        'genex-video': 2.0,
+        'moc-video': 2.0
+    };
+
+    Object.entries(playbackRates).forEach(function([id, rate]) {
+        const video = document.getElementById(id);
+        if (!video) return;
+
+        const applyPlaybackRate = function() {
+            video.defaultPlaybackRate = rate;
+            video.playbackRate = rate;
+        };
+
+        applyPlaybackRate();
+        video.addEventListener('loadedmetadata', applyPlaybackRate);
+    });
 });
 </script>
 
